@@ -1,0 +1,10 @@
+plugins {
+    id 'java-platform'
+}
+
+dependencies {
+    constraints {
+        api(project(":jvmmvvm-ui"))
+        api(project(":jvmmvvm-domain"))
+    }
+}

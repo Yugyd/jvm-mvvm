@@ -19,5 +19,16 @@ dependencyResolutionManagement {
     }
 }
 
+buildCache {
+    local {
+        enabled true
+    }
+}
+
 rootProject.name = "JvmMvvm"
-include ':app'
+// Sample app
+include ':sample'
+// Lib
+include(":jvmmvvm-bom")
+include ':jvmmvvm-ui'
+include ':jvmmvvm-domain'
