@@ -25,10 +25,10 @@ buildCache {
     }
 }
 
-rootProject.name = "JvmMvvm"
+rootProject.name = "ViewModelDelegates"
 // Sample app
 include ':sample'
 // Lib
-include(":jvmmvvm-bom")
-include ':jvmmvvm-ui'
-include ':jvmmvvm-domain'
+include(':viewmodeldelegates-bom')
+include ':viewmodeldelegates-ui'
+include ':viewmodeldelegates'

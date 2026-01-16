@@ -4,14 +4,14 @@ plugins {
 }
 
 android {
-    namespace 'com.yugyd.jvmmvvm.sample'
+    namespace 'com.yugyd.viewmodeldelegates.sample'
 
     compileSdk {
         version = release(36)
     }
 
     defaultConfig {
-        applicationId "com.yugyd.jvmmvvm.sample"
+        applicationId "com.yugyd.viewmodeldelegates.sample"
         versionCode 1
         versionName "1.0"
 
@@ -48,8 +48,8 @@ android {
 
 dependencies {
     // Local
-    implementation(project(":jvmmvvm-domain"))
-    implementation(project(":jvmmvvm-ui"))
+    implementation(project(":viewmodeldelegates"))
+    implementation(project(":viewmodeldelegates-ui"))
 
     // Android X
     implementation libs.androidx.core.ktx
