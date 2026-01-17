@@ -1,6 +1,12 @@
 Change Log
 ==========
 
+## Version 0.3.0
+
+_2026-01-18_
+
+* New: Implement a simple ViewModel pattern
+
 ## Version 0.2.0
 
 _2026-01-18_
