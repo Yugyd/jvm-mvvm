@@ -1,6 +1,12 @@
 Change Log
 ==========
 
+## Version 0.2.0
+
+_2026-01-18_
+
+* New: Add Kotlin Multiplatform support for Android and iOS targets.
+
 ## Version 0.1.0
 
 _2026-01-17_
