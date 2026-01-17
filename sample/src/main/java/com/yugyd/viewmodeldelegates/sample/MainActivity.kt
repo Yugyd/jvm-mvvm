@@ -7,7 +7,6 @@ import androidx.activity.enableEdgeToEdge
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.AccountBox
 import androidx.compose.material.icons.filled.Favorite
 import androidx.compose.material.icons.filled.Home
 import androidx.compose.material3.Icon
@@ -24,6 +23,8 @@ import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.tooling.preview.PreviewScreenSizes
 import androidx.lifecycle.viewmodel.compose.viewModel
+import com.yugyd.viewmodeldelegates.sample.ui.favorites.di.buildFavoritesBinder
+import com.yugyd.viewmodeldelegates.sample.ui.favorites.ui.FavoritesScreen
 import com.yugyd.viewmodeldelegates.sample.ui.home.di.buildHomeBinder
 import com.yugyd.viewmodeldelegates.sample.ui.home.ui.HomeScreen
 import com.yugyd.viewmodeldelegates.sample.ui.theme.ViewModelDelegatesTheme
@@ -79,16 +80,16 @@ fun ViewModelDelegatesApp() {
                 }
 
                 AppDestinations.FAVORITES -> {
-                    Greeting(
-                        name = "Favorites",
-                        modifier = Modifier.padding(innerPadding)
-                    )
-                }
-
-                AppDestinations.PROFILE -> {
-                    Greeting(
-                        name = "Profile",
-                        modifier = Modifier.padding(innerPadding)
+                    FavoritesScreen(
+                        binder = viewModel(
+                            initializer = {
+                                buildFavoritesBinder()
+                            },
+                        ),
+                        modifier = Modifier.padding(innerPadding),
+                        onBack = {
+                            currentDestination = AppDestinations.HOME
+                        }
                     )
                 }
             }
@@ -102,7 +103,6 @@ enum class AppDestinations(
 ) {
     HOME("Home", Icons.Default.Home),
     FAVORITES("Favorites", Icons.Default.Favorite),
-    PROFILE("Profile", Icons.Default.AccountBox),
 }
 
 @Composable

@@ -11,11 +11,11 @@ import com.yugyd.viewmodeldelegates.sample.ui.home.domain.OnActionClickedViewMod
 import com.yugyd.viewmodeldelegates.sample.ui.home.domain.OnNavigationHandledViewModelDelegate
 import com.yugyd.viewmodeldelegates.sample.ui.home.domain.OnSnackbarDismissedViewModelDelegate
 import com.yugyd.viewmodeldelegates.sample.ui.home.domain.data.HomeRepositoryImpl
-import com.yugyd.viewmodeldelegates.sample.ui.home.ui.DispatchersProviderImpl
+import com.yugyd.viewmodeldelegates.sample.ui.core.DispatchersProviderImpl
 import com.yugyd.viewmodeldelegates.sample.ui.home.ui.HomeBinder
 import com.yugyd.viewmodeldelegates.sample.ui.home.ui.HomeMapper
 
-private fun buildLogger() = object : ViewModelLogger {
+internal fun buildLogger() = object : ViewModelLogger {
     override fun log(message: String) {
         println(message)
     }

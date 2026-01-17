@@ -1,4 +1,4 @@
-package com.yugyd.viewmodeldelegates.sample.ui.home.ui
+package com.yugyd.viewmodeldelegates.sample.ui.core
 
 import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.Dispatchers
